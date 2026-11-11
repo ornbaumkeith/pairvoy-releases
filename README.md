@@ -1,7 +1,9 @@
-# Tandem testing downloads
+# Pairvoy testing downloads
 
-Public Windows and Android testing packages for Tandem. Application source and Android signing material remain private.
+**Your goals. Our journey.** Official Windows and Android testing packages for Pairvoy, the couples goal-planning app.
 
-Download and setup information: https://ornbaumkeith.github.io/projects/tandem/index.html
+[Pairvoy project and current download status](https://ornbaumkeith.github.io/projects/pairvoy/index.html)
 
-These are pre-release testing builds. Windows installers are not Authenticode-signed. Android APKs use a dedicated release signing identity. Physical-device acceptance, password-recovery email delivery and off-service backup/restore remain open.
+Pairvoy 0.5.15 retains the latest 0.5.14 functionality and adds the new name, linked-heart branding and local-data migration. Native packages are published only after build, checksum and launch checks. Application source, account data and Android signing material remain private.
+
+Earlier releases and their filenames remain historical records. The original Android package ID/signing identity and desktop data identity are preserved for upgrades. Windows testing installers are unsigned. Physical-device acceptance, recovery-email delivery and operational backup checks remain separate from the rebrand.
