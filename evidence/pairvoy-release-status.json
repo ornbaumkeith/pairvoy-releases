@@ -1,0 +1,34 @@
+{
+  "version": "0.5.15",
+  "sourceBaseline": "Tandem 0.5.14 GitHub main",
+  "sourceRebrandCommit": "473a3d77717a51e61d4388adc57b9f5577ce114d",
+  "checks": {
+    "typescript": "passed",
+    "releaseConsistency": "passed",
+    "localTests": {
+      "passed": 70,
+      "failed": 0,
+      "skipped": 1
+    },
+    "postgresIntegrationCI": "passed",
+    "backendContainerCI": "passed",
+    "webExport": "passed",
+    "androidJavaScriptExport": "passed",
+    "windowsBuild": "passed",
+    "actualNsisInstallation": "passed",
+    "installedRenderer": "passed",
+    "focusedClipboardWrite": "passed",
+    "windowsAppearanceCaptures": "passed",
+    "hostedApi": "passed: HTTP 200, pairvoy 0.5.15",
+    "androidNativeBuild": "passed: signed APK, package 0.5.15, versionCode 515",
+    "installedRendererApiAndClipboard": "passed: workflow 43115516965 attempt 2",
+    "androidEmulator": "passed: installation, launch, Sign in UI, runtime error checks"
+  },
+  "audit": {
+    "low": 1,
+    "moderate": 7,
+    "high": 3,
+    "critical": 0
+  },
+  "productionReadinessEstablished": false
+}

@@ -41,8 +41,11 @@ for platform in manifest['platforms']:
   if manifest['publish']:
    assert 'Sign in' in (out/'android-ui.xml').read_text()
    assert 'com.tandem.goals' in (out/'android-launch.txt').read_text()
+  if manifest['publish']:assert (out/'android-runtime-errors.txt').is_file()
   errors=(out/'android-runtime-errors.txt').read_text() if (out/'android-runtime-errors.txt').exists() else ''
   assert not any(s in errors for s in ['FATAL EXCEPTION','TypeError:','ReferenceError:','Error:'])
+  if (out/'android-runtime-errors.txt').exists() and not errors.strip():
+   (out/'android-runtime-errors.txt').write_text('Log capture was empty: no AndroidRuntime:E or ReactNativeJS:E messages were recorded during the emulator launch check.\n')
   for permission in ['CAMERA','RECORD_AUDIO','READ_EXTERNAL_STORAGE','WRITE_EXTERNAL_STORAGE','READ_MEDIA_IMAGES','READ_MEDIA_VIDEO','SYSTEM_ALERT_WINDOW']:
    assert 'android.permission.'+permission not in (out/'android-permissions.txt').read_text()
 if manifest['publish']:

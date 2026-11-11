@@ -1,0 +1,30 @@
+{
+  "version": "0.5.15",
+  "tag": "pairvoy-v0.5.15",
+  "publish": true,
+  "platforms": {
+    "windows": {
+      "url": "https://sdmntprwestus3.oaiusercontent.com/files/00000000-ceec-81fd-9bff-dee4f839759f/raw?se=2026-11-11T23%3A15%3A03Z&sp=r&sv=2026-06-06&sr=b&scid=3a0af867-273b-4076-897f-d195ffc2a40f&skoid=5e713cdb-766b-475e-a3ca-8adb6cf99aa0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-11T23%3A04%3A10Z&ske=2026-11-12T23%3A04%3A10Z&sks=b&skv=2026-06-06&sig=o8rBYQZOTSHLmRb8EqelRgTmx9UtYnYUCHj2Xb4EBSU%3D",
+      "archive_sha256": "436eec992c5c54f88c8d1bcc079cc6ae91233b7bbea0daffd03d0d34f6724228",
+      "files": {
+        "Pairvoy_0.5.15_Windows_x64_Setup.exe": "4e252c168f67a054c84e2b59565f188e6489376165f0514b66ab1ae57dbce177",
+        "Pairvoy_0.5.15_Windows_x64_Setup.exe.sha256": "069c09e953f75a4fbc1ff6a18bfdadc980f0fd62a3a782ca7c82b2695d51e005",
+        "windows-smoke.json": "18594603178fb695d16ed971fe1df74092cdbd5a6efc6839a0333298753985bb"
+      }
+    },
+    "android": {
+      "url": "https://sdmntprwestus3.oaiusercontent.com/files/00000000-1748-81fd-bec5-468a6c0a9915/raw?se=2026-11-11T23%3A14%3A54Z&sp=r&sv=2026-06-06&sr=b&scid=3a0af867-273b-4076-897f-d195ffc2a40f&skoid=5e713cdb-766b-475e-a3ca-8adb6cf99aa0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-11T02%3A23%3A44Z&ske=2026-11-12T02%3A23%3A44Z&sks=b&skv=2026-06-06&sig=r3ZxL6xvnitPOQpE4muABsqrthmrHUbcilGURk3auE4%3D",
+      "archive_sha256": "5030cbf3aa2ff581a9bf0a29f2b26f2a66fe61a1c7c8d706379d53d64544cc0e",
+      "files": {
+        "Pairvoy_0.5.15_Android.apk": "6c7cb2b1fe7eb96ebc009640de928af88ce10db4cafa5313cef828fa07530e73",
+        "Pairvoy_0.5.15_Android.apk.sha256": "6b0f9d4056cdac491809fedfd6cce0d438a865536ae1f95ee0de59f639f8d44e",
+        "android-launch.txt": "5859c8abebd2c0a93de19d558e370abbcf7a91a9b945ea0faf2e610c7a81e3cf",
+        "android-package.txt": "f5f84abbbcd5808be8f822c6ded9cee43e98aff8cb8dcbee3806332f0d4d6c7d",
+        "android-permissions.txt": "a9f8e7c3479c3893b6195449e2c0a0ab2e26c6d82b50e54421a294a614bca8bb",
+        "android-runtime-errors.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "android-signature.txt": "de84b36cf14ee98f4b166cd97bb4155ec3728c7481eb17b61bf58279982094b4",
+        "android-ui.xml": "4051e8323d302b80682bd53830aac5645e423e3618069fa4aa58c7ad41bc1d38"
+      }
+    }
+  }
+}

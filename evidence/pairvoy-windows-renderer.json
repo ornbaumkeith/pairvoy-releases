@@ -1,0 +1,13 @@
+{
+  "api": {
+    "ok": true,
+    "service": "pairvoy",
+    "version": "0.5.15"
+  },
+  "clipboard": {
+    "result": "passed",
+    "error": null
+  },
+  "hasNode": false,
+  "phase": "complete"
+}

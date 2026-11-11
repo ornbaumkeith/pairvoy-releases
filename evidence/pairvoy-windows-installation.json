@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "title": "Pairvoy",
+  "origin": "app://tandem",
+  "hasNode": false,
+  "version": "0.5.15",
+  "platform": "win32",
+  "electron": "45.0.0",
+  "installerExitCode": 0,
+  "installedFromNsis": true,
+  "installPathHasSpaces": true
+}
