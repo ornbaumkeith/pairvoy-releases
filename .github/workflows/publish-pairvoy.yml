@@ -1,0 +1,50 @@
+name: Stage or publish verified Pairvoy downloads
+on:
+  push:
+    branches: [main]
+    paths: ['distribution/pairvoy-0.5.15.json']
+permissions:
+  contents: write
+concurrency:
+  group: pairvoy-publication
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - name: Verify approved artifacts and release gates
+        run: python3 distribution/verify-pairvoy.py
+      - name: Stage verified files in a prerelease draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag=pairvoy-v0.5.15
+          existing=$(gh release view "$tag" --json isDraft --jq .isDraft 2>/dev/null || true)
+          if [ "$existing" = false ]; then
+            echo 'Preserving published downloads; create a new version instead.' >&2
+            exit 1
+          elif [ -z "$existing" ]; then
+            gh release create "$tag" --draft --prerelease --title 'Pairvoy 0.5.15 — Windows and Android testing' --notes-file TESTING.md
+          else
+            gh release edit "$tag" --notes-file TESTING.md
+          fi
+          gh release upload "$tag" public-assets/* --clobber
+          python3 - <<'PY'
+          import json,os,subprocess,pathlib,hashlib
+          expected={p.name:{'size':p.stat().st_size,'digest':'sha256:'+hashlib.sha256(p.read_bytes()).hexdigest()} for p in pathlib.Path('public-assets').iterdir()}
+          releases=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/releases']))
+          release=next(r for r in releases if r['tag_name']=='pairvoy-v0.5.15')
+          assert release['draft']
+          actual={x['name']:x for x in release['assets']}
+          for name,item in expected.items():
+              assert actual[name]['size']==item['size']
+              if actual[name].get('digest'):assert actual[name]['digest']==item['digest']
+          print('Uploaded file sizes and available GitHub digests match.')
+          PY
+          publish=$(python3 -c "import json;print(str(json.load(open('distribution/pairvoy-0.5.15.json'))['publish']).lower())")
+          if [ "$publish" = true ]; then gh release edit "$tag" --draft=false --prerelease; fi

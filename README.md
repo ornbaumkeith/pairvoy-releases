@@ -1,5 +1,7 @@
 # Pairvoy testing downloads
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="branding/pairvoy-logo-dark.svg"><img src="branding/pairvoy-logo-light.svg" alt="Pairvoy linked-heart logo" width="420"></picture>
+
 **Your goals. Our journey.** Official Windows and Android testing packages for Pairvoy, the couples goal-planning app.
 
 [Pairvoy project and current download status](https://ornbaumkeith.github.io/projects/pairvoy/index.html)
