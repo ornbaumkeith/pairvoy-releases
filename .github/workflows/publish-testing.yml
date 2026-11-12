@@ -1,4 +1,4 @@
-name: Publish verified Tandem testing downloads
+name: Pairvoy historical testing downloads
 on:
   push:
     branches: [main]

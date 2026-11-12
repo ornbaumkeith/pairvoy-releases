@@ -1,4 +1,4 @@
-name: Finalize verified Tandem testing draft
+name: Pairvoy historical testing draft finalization
 on:
   push:
     branches: [main]
