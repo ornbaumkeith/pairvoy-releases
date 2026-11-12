@@ -1,34 +1,32 @@
 {
-  "version": "0.5.15",
-  "sourceBaseline": "Tandem 0.5.14 GitHub main",
-  "sourceRebrandCommit": "473a3d77717a51e61d4388adc57b9f5577ce114d",
-  "checks": {
-    "typescript": "passed",
-    "releaseConsistency": "passed",
-    "localTests": {
-      "passed": 70,
-      "failed": 0,
-      "skipped": 1
-    },
-    "postgresIntegrationCI": "passed",
-    "backendContainerCI": "passed",
-    "webExport": "passed",
-    "androidJavaScriptExport": "passed",
-    "windowsBuild": "passed",
-    "actualNsisInstallation": "passed",
-    "installedRenderer": "passed",
-    "focusedClipboardWrite": "passed",
-    "windowsAppearanceCaptures": "passed",
-    "hostedApi": "passed: HTTP 200, pairvoy 0.5.15",
-    "androidNativeBuild": "passed: signed APK, package 0.5.15, versionCode 515",
-    "installedRendererApiAndClipboard": "passed: workflow 43115516965 attempt 2",
-    "androidEmulator": "passed: installation, launch, Sign in UI, runtime error checks"
+  "version": "0.5.16",
+  "channel": "testing",
+  "sourceCommit": "d040d9d8ff95ba327e207813e45fb1cd67aaa7a2",
+  "functionalBaseline": "Pairvoy 0.5.15; latest 0.5.14 functionality retained",
+  "buildRun": 43124528100,
+  "sourceValidationRuns": [
+    43124528146,
+    43125183925
+  ],
+  "backendIntegrationRun": 43124528109,
+  "windowsAcceptanceRun": 43125489358,
+  "windows": {
+    "installedFromNsis": true,
+    "branding": "passed",
+    "customServerSwitch": "passed",
+    "unsigned": true
   },
-  "audit": {
-    "low": 1,
-    "moderate": 7,
-    "high": 3,
-    "critical": 0
+  "android": {
+    "versionCode": 516,
+    "releaseSigned": true,
+    "emulatorLaunch": "passed",
+    "legacyUiLabelVisible": false,
+    "allApplicationLabels": "Pairvoy"
   },
-  "productionReadinessEstablished": false
+  "limits": [
+    "physical-device acceptance",
+    "recovery-email delivery",
+    "operational backup/restore",
+    "dependency findings"
+  ]
 }

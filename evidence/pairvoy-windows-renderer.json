@@ -9,5 +9,11 @@
     "error": null
   },
   "hasNode": false,
+  "branding": {
+    "title": "Pairvoy",
+    "legacyLabelVisible": false,
+    "legacyAddressVisible": false,
+    "customServerSwitch": "passed"
+  },
   "phase": "complete"
 }

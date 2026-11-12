@@ -6,6 +6,6 @@
 
 [Pairvoy project and current download status](https://ornbaumkeith.github.io/projects/pairvoy/index.html)
 
-Pairvoy 0.5.15 retains the latest 0.5.14 functionality and adds the new name, linked-heart branding and local-data migration. Native packages are published only after build, checksum and launch checks. Application source, account data and Android signing material remain private.
+Pairvoy 0.5.16 retains the latest 0.5.14 functionality and adds the new name, linked-heart branding and local-data migration. Native packages passed build, checksum and launch checks. The official service displays as Pairvoy cloud; custom-server setup remains available. Application source, account data and Android signing material remain private.
 
 Earlier releases and their filenames remain historical records. The original Android package ID/signing identity and desktop data identity are preserved for upgrades. Windows testing installers are unsigned. Physical-device acceptance, recovery-email delivery and operational backup checks remain separate from the rebrand.
